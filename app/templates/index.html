@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="left">
+        {% for file in files %}
+            <p class="file__content">{{ file.file_content }}</p>
+            <div class="file__tags">
+                {% for tag in file.tags %}
+                    <p class="tag">{{ tag.tag_name }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
