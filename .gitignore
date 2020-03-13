@@ -24,3 +24,5 @@ dmypy.json
 # Flask stuff:
 instance/
 .webassets-cache
+
+.idea/
